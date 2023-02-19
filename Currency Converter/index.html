@@ -15,7 +15,7 @@
         <h1>currency converter</h1>
         <form action="">
             <div class="in">
-                <input id ="a" type="number" min="0" value="0" onchange="convert(document.getElementById('a').value,1)">
+                <input id ="a" type="number" min="0" value="0" onkeypress="convert(document.getElementById('a').value,1)">
                 <div class="info">
                     <img src="eg.png" alt="EGP">
                     <span>EGP</span>
@@ -23,7 +23,7 @@
             </div>
 
             <div class="in">
-                <input id ="b" type="number" min="0" value="0" onchange="convert(document.getElementById('b').value,2)">
+                <input id ="b" type="number" min="0" value="0" onkeypress="convert(document.getElementById('b').value,2)">
                 <div class="info">
                     <img src="us.png" alt="USD">
                     <span>USD</span>
@@ -31,6 +31,7 @@
             </div>
 
         </form>
+        <span class="message">Enter the number and press Enter</span>
     </div>
     <script src="main.js"></script>
 </body>
