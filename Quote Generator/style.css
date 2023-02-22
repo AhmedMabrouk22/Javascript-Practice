@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    padding: 10px;
+}
+
+.container h1 {
+    background: #fff;
+    width: fit-content;
+    margin: auto;
+    padding: 10px 40px;
+    margin-bottom: 19px;
+    color: #434343;
+}
+
+.container .content {
+    min-width: 350px;
+    max-width: 600px;
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.container .content .text {
+    position: relative;
+}
+
+.container .content .text .qoute {
+    
+    line-height: 1.7;
+    font-size: 22px;
+    text-align: left;
+    color: #282828;
+    position: relative;
+
+}
+
+.container .content .text .qoute::before {
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 11px;
+    font-size: 44px;
+
+}
+
+.container .content .text .person {
+    text-align: right;
+    font-size: 15px;
+    color: #888888;
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+}
+
+.container .content .text .person::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #434343;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -28px;
+}
+
+.container .content .control {
+    margin-top: 45px;
+    text-align: left;
+}
+
+.container .content .control .copy
+{
+    color: #282828;
+    font-size: 20px;
+    margin-right: 20px;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.container .content .control .new-qoute {
+    padding: 5px 15px;
+    border: 0;
+    font-size: 15px;
+    background: #282828;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .content .control .copy-message {
+    position: absolute;
+    padding: 20px;
+    background: #000c;
+    min-width: 160px;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: move .2s linear;
+    -webkit-animation: move .2s linear;
+}
+
+
+
+.container .content .control .copy-message .mes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .content .control .copy-message .mes i {
+    font-size: 30px;
+    color: #8bc34a;
+}
+
+.container .content .control .copy-message .mes span {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+}
+
+@keyframes move {
+    0% {
+        width: 0%;
+        height: 0%;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}
